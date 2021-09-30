@@ -41,8 +41,18 @@ KSQL_OPTS="${KSQL_OPTS} -D${SERVER_NAME}"
 # KSQL_OPTS="${KSQL_OPTS} -javaagent:${JMX_EXPORTER_JAVA_AGENT_FILE}=${JMX_EXPORTER_HOST_PORT}:${JMX_EXPORTER_CONFIG_FILE}"
 export KSQL_OPTS
 
-### gc option
-export GC_LOG_ENABLED="true"
+### gc options
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -Xloggc:${LOG_DIR}/${SERVER_NAME}-gc.log"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -verbose:gc"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -XX:+PrintGCDetails"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -XX:+PrintGCDateStamps"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -XX:+PrintGCTimeStamps"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -XX:+UseGCLogFileRotation"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -XX:NumberOfGCLogFiles=10"
+KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -XX:GCLogFileSize=100M"
+export KSQL_GC_LOG_OPTS
+# KSQL_GC_LOG_OPTS="${KSQL_GC_LOG_OPTS} -Xlog:gc*:file=${LOG_DIR}/${SERVER_NAME}-gc.log:time,tags:filecount=10,filesize=100M"
+# export KSQL_GC_LOG_OPTS
 
 ### jmx
 KSQL_JMX_OPTS="${KSQL_JMX_OPTS} -Dcom.sun.management.jmxremote"
