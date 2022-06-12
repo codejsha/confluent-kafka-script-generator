@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from template.python.argument_parse import *
-from template.python.command import *
 from template.python.fileio import *
 from template.python.log4j_prop import *
 from template.python.other import *
@@ -90,16 +89,6 @@ def create_pssh_file(base, server_dict, pssh_start_dict, pssh_stop_dict, pssh_ki
 
 # endregion
 
-# region command_file
-
-
-def create_command_file(base, server_dict, command_dict):
-    for command_type, command_script in command_dict.items():
-        create_topic_command_file(base, server_dict, command_type, command_script)
-
-
-# endregion
-
 
 ######################################################################
 
@@ -133,7 +122,6 @@ def main():
     pssh_start_data = read_pssh_start_template_data(current_dir)
     pssh_stop_data = read_pssh_stop_template_data(current_dir)
     pssh_kill_data = read_pssh_kill_template_data(current_dir)
-    command_data = read_command_template_data(current_dir)
 
     # create script and property files
     create_server_file(base_data, server_data, prop_data, log4j_data,
@@ -145,7 +133,6 @@ def main():
     # create pssh files
     create_pssh_file(base_data, server_data, pssh_start_data, pssh_stop_data, pssh_kill_data)
     # create command files
-    create_command_file(base_data, server_data, command_data)
 
 
 if __name__ == "__main__":

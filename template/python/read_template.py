@@ -179,18 +179,3 @@ def read_pssh_kill_template_data(current_dir):
 
 
 # endregion
-
-# region commands
-
-
-def read_command_template_data(current_dir):
-    command_template_dir = current_dir.joinpath('template/commands')
-    command_dict = {
-        TopicCommandType.CREATE: read_file(f'{command_template_dir}/create-topic-template.sh'),
-        TopicCommandType.DELETE: read_file(f'{command_template_dir}/delete-topic-template.sh'),
-        TopicCommandType.DESCRIBE: read_file(f'{command_template_dir}/describe-topic-template.sh'),
-        TopicCommandType.LIST: read_file(f'{command_template_dir}/get-topic-list-template.sh'),
-    }
-    return command_dict
-
-# endregion
