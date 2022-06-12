@@ -1,6 +1,6 @@
 # Confluent Kafka Script Generator
 
-NOTE: This project is no longer supported. I recommend using the Ansible. (cf. https://github.com/confluentinc/jmx-monitoring-stacks)
+NOTE: This project is no longer maintained. I recommend using the Ansible. (Ansible playbooks for the Confluent Platform: https://github.com/confluentinc/cp-ansible)
 
 The Confluent Kafka Script Generator helps you create scripts(start/stop scripts, properties ...) for Confluent Platform.
 
