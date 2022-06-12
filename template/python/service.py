@@ -30,6 +30,7 @@ def create_service_env_file(base, server, service_env):
     edited_service_env = replace_variable('JAVA_HOME', f'{base.java_home}', edited_service_env)
 
     edited_service_env = substitute_variable('CONFLUENT_HOME', f'{base.confluent_home}', edited_service_env)
+    edited_service_env = substitute_variable('LOG_DIR', f'{server.log_dir}', edited_service_env)
     edited_service_env = substitute_variable('SERVER_NAME', f'{server.server_name}', edited_service_env)
 
     write_file(f'output/services/{server.file.service_env}', edited_service_env)
