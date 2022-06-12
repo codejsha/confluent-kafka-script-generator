@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# USER="cp-kafka"
-# GROUP="confluent"
 USER=""
 GROUP=""
 
@@ -10,8 +8,6 @@ SERVER_NAME=""
 MYID=""
 PROPERTIES_FILE=""
 
-# DATA_DIR="/var/lib/zookeeper"
-# LOG_DIR="/var/log/kafka"
 DATA_DIR=""
 LOG_DIR=""
 

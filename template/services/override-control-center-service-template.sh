@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# USER="cp-control-center"
-# GROUP="confluent"
 USER=""
 GROUP=""
 
@@ -9,8 +7,6 @@ CONFLUENT_HOME=""
 SERVER_NAME=""
 PROPERTIES_FILE=""
 
-# DATA_DIR="/var/lib/confluent/control-center"
-# LOG_DIR="/var/log/confluent/control-center"
 DATA_DIR=""
 LOG_DIR=""
 

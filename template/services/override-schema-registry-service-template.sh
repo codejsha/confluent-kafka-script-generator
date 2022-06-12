@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# USER="cp-schema-registry"
-# GROUP="confluent"
 USER=""
 GROUP=""
 
@@ -9,7 +7,6 @@ CONFLUENT_HOME=""
 SERVER_NAME=""
 PROPERTIES_FILE=""
 
-# LOG_DIR="/var/log/confluent/schema-registry"
 LOG_DIR=""
 
 ######################################################################

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# USER="cp-kafka"
-# GROUP="confluent"
 USER=""
 GROUP=""
 
@@ -9,8 +7,6 @@ CONFLUENT_HOME=""
 SERVER_NAME=""
 PROPERTIES_FILE=""
 
-# DATA_DIR="/var/lib/kafka"
-# LOG_DIR="/var/log/kafka"
 DATA_DIR=""
 LOG_DIR=""
 

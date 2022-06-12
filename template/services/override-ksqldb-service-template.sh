@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# USER="cp-ksql"
-# GROUP="confluent"
 USER=""
 GROUP=""
 
@@ -9,8 +7,6 @@ CONFLUENT_HOME=""
 SERVER_NAME=""
 PROPERTIES_FILE=""
 
-# DATA_DIR="/var/lib/kafka-streams"
-# LOG_DIR="/var/log/confluent/ksql"
 DATA_DIR=""
 LOG_DIR=""
 
